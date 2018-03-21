@@ -1,0 +1,30 @@
+{
+  "name": "my-apis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "9.8.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node --presets es2015"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-promise-router": "^3.0.1",
+    "joi": "^13.1.2",
+    "mongoose": "^5.0.11",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.17.2"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
