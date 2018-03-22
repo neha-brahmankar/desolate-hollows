@@ -6,9 +6,9 @@
     "node": "9.8.0"
   },
   "scripts": {
+    "build": "babel src -s -D -d dist",
     "start": "nodemon src/index.js --exec babel-node --presets es2015",
-    "deploy": "node dist/index.js",
-    "build": "babel src -s -D -d dist"
+    "deploy": "npm run build && node dist/index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
