@@ -63,7 +63,8 @@ app.use(function (err, req, res, next) {
 });
 
 //Start server
-var port = app.get('port') || 3003;
+var port = process.env.PORT || 5000;
+
 app.listen(port, function () {
     return console.log('Server listening on ' + port);
 });
