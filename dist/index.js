@@ -20,16 +20,20 @@ var _users = require('./routes/users');
 
 var _users2 = _interopRequireDefault(_users);
 
+var _cars = require('./routes/cars');
+
+var _cars2 = _interopRequireDefault(_cars);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // mongoose.connect('mongodb://localhost/apiproject')
-_mongoose2.default.connect('mongodb://nehab:N3ha%40123@ds219879.mlab.com:19879/apiproject');
-
-//Register express app
 
 
 //Import Routes
 //Import packages/dependencies
+_mongoose2.default.connect('mongodb://nehab:N3ha%40123@ds219879.mlab.com:19879/apiproject');
+
+//Register express app
 var app = (0, _express2.default)();
 
 //Configure Middleware
@@ -37,6 +41,7 @@ app.use((0, _morgan2.default)('dev'));
 app.use(_bodyParser2.default.json());
 
 //Configure Routes
+app.use('/cars', _cars2.default);
 app.use('/users', _users2.default);
 
 //Catch 404 error and forward to error handler function

@@ -49,10 +49,26 @@ module.exports = {
             lastName: _joi2.default.strict(),
             email: _joi2.default.string().email()
         }),
-        carSchema: _joi2.default.object().keys({
+        userCarSchema: _joi2.default.object().keys({
             make: _joi2.default.string().required(),
             model: _joi2.default.strict().required(),
             year: _joi2.default.number().required()
+        }),
+        carSchema: _joi2.default.object().keys({
+            make: _joi2.default.string().required(),
+            model: _joi2.default.strict().required(),
+            year: _joi2.default.number().required(),
+            seller: _joi2.default.string().regex(/^[0-9a-fA-F]{24}$/).required()
+        }),
+        replaceCarSchema: _joi2.default.object().keys({
+            make: _joi2.default.string().required(),
+            model: _joi2.default.strict().required(),
+            year: _joi2.default.number().required()
+        }),
+        carOptionalSchema: _joi2.default.object().keys({
+            make: _joi2.default.string(),
+            model: _joi2.default.strict(),
+            year: _joi2.default.number()
         })
     }
 };

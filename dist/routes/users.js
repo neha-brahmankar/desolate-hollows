@@ -34,7 +34,7 @@ router.route('/').get(_users2.default.index).post((0, _routerHelpers.validateBod
 router.route('/:userId').get((0, _routerHelpers.validateParams)(_routerHelpers.schemas.idSchema, 'userId'), _users2.default.getUser).put([(0, _routerHelpers.validateParams)(_routerHelpers.schemas.idSchema, 'userId'), (0, _routerHelpers.validateBody)(_routerHelpers.schemas.userSchema)], _users2.default.replaceUser).patch([(0, _routerHelpers.validateParams)(_routerHelpers.schemas.idSchema, 'userId'), (0, _routerHelpers.validateBody)(_routerHelpers.schemas.userOptionalSchema)], _users2.default.updateUser);
 // .delete();
 
-router.route('/:userId/cars').get((0, _routerHelpers.validateParams)(_routerHelpers.schemas.idSchema, 'userId'), _users2.default.getUserCars).post((0, _routerHelpers.validateBody)(_routerHelpers.schemas.carSchema), _users2.default.newUserCar);
+router.route('/:userId/cars').get((0, _routerHelpers.validateParams)(_routerHelpers.schemas.idSchema, 'userId'), _users2.default.getUserCars).post((0, _routerHelpers.validateBody)(_routerHelpers.schemas.userCarSchema), _users2.default.newUserCar);
 
 exports.default = router;
 
