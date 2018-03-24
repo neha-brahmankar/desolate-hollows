@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 
 //Import Routes
 import usersRoutes from './routes/users';
+import carRoutes from './routes/cars';
 
 // mongoose.connect('mongodb://localhost/apiproject')
 mongoose.connect('mongodb://nehab:N3ha%40123@ds219879.mlab.com:19879/apiproject');
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 
 //Configure Routes
+app.use('/cars', carRoutes);
 app.use('/users', usersRoutes);
 
 //Catch 404 error and forward to error handler function

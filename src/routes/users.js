@@ -22,7 +22,7 @@ router.route('/:userId')
 
 router.route('/:userId/cars')
     .get(validateParams(schemas.idSchema, 'userId'), UsersController.getUserCars)
-    .post(validateBody(schemas.carSchema), UsersController.newUserCar)
+    .post(validateBody(schemas.userCarSchema), UsersController.newUserCar)
 
 export default router;
 
